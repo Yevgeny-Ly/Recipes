@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "8CAFC00A-5515-408D-B3DB-01462D189F33"
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "987CECEE-79A4-4D92-BDE7-9A8FEEEAE810"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MVP-UI/RecipesModule/RecipesDetails/RecipesDetailsViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "205"
+            endingLineNumber = "205"
+            landmarkName = "swipeTableView()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BEF6742B-BF02-4904-9EAE-12D2B96D2AF9"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MVP-UI/RecipesModule/RecipesDetails/RecipesDetailsViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "313"
+            endingLineNumber = "313"
+            landmarkName = "getDetail(recipe:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "BEF6742B-BF02-4904-9EAE-12D2B96D2AF9 - de0f7302669d0a70"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MVP_UI.RecipesDetailsViewController.getDetail(recipe: MVP_UI.RecipeDetail) -&gt; ()"
+                  moduleName = "MVP-UI"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yevgeny/Documents/SwiftPlayground/%D0%9E%D0%B1%D1%83%D1%87%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%96%D0%B5%D0%BD%D1%8F%20%D0%97%D0%B2%D0%B5%D1%80%D0%B8%D0%BA/GitHub/MVP-UI/MVP-UI/MVP-UI/RecipesModule/RecipesDetails/RecipesDetailsViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "314"
+                  endingLineNumber = "314"
+                  offsetFromSymbolStart = "36">
+               </Location>
+               <Location
+                  uuid = "BEF6742B-BF02-4904-9EAE-12D2B96D2AF9 - de0f7302669d0a11"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MVP_UI.RecipesDetailsViewController.getDetail(recipe: MVP_UI.RecipeDetail) -&gt; ()"
+                  moduleName = "MVP-UI"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yevgeny/Documents/SwiftPlayground/%D0%9E%D0%B1%D1%83%D1%87%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%96%D0%B5%D0%BD%D1%8F%20%D0%97%D0%B2%D0%B5%D1%80%D0%B8%D0%BA/GitHub/MVP-UI/MVP-UI/MVP-UI/RecipesModule/RecipesDetails/RecipesDetailsViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "313"
+                  endingLineNumber = "313"
+                  offsetFromSymbolStart = "156">
+               </Location>
+               <Location
+                  uuid = "BEF6742B-BF02-4904-9EAE-12D2B96D2AF9 - de0f7302669d0a11"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MVP_UI.RecipesDetailsViewController.getDetail(recipe: MVP_UI.RecipeDetail) -&gt; ()"
+                  moduleName = "MVP-UI"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yevgeny/Documents/SwiftPlayground/%D0%9E%D0%B1%D1%83%D1%87%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%96%D0%B5%D0%BD%D1%8F%20%D0%97%D0%B2%D0%B5%D1%80%D0%B8%D0%BA/GitHub/MVP-UI/MVP-UI/MVP-UI/RecipesModule/RecipesDetails/RecipesDetailsViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "313"
+                  endingLineNumber = "313"
+                  offsetFromSymbolStart = "116">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "15EE9011-76C9-4A93-8E7D-FDD0A3F86094"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MVP-UI/RecipesModule/RecipesDetails/RecipesDetailsPresenter/DetailsPresenter.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "96"
+            endingLineNumber = "96"
+            landmarkName = "getDetail()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "926D384A-519B-496D-BF51-815160977EEE"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DetailsRecipesData+CoreDataProperties.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "2"
+            endingLineNumber = "2"
+            landmarkName = "unknown"
+            landmarkType = "0">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
