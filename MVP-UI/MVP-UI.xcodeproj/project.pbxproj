@@ -77,7 +77,6 @@
 		D5783B262B90922C00C81FAF /* RecipesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5783B252B90922C00C81FAF /* RecipesCell.swift */; };
 		D5EFBD5A2B8CA6AA005F6F9B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5EFBD592B8CA6AA005F6F9B /* AppDelegate.swift */; };
 		D5EFBD5C2B8CA6AA005F6F9B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5EFBD5B2B8CA6AA005F6F9B /* SceneDelegate.swift */; };
-		D5EFBD5E2B8CA6AA005F6F9B /* AutorizationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5EFBD5D2B8CA6AA005F6F9B /* AutorizationViewController.swift */; };
 		D5EFBD632B8CA6B0005F6F9B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D5EFBD622B8CA6B0005F6F9B /* Assets.xcassets */; };
 		D5EFBD722B8CD621005F6F9B /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5EFBD712B8CD621005F6F9B /* TabBarController.swift */; };
 		D5EFBD772B8CD9E4005F6F9B /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5EFBD762B8CD9E4005F6F9B /* FavoritesViewController.swift */; };
@@ -158,7 +157,6 @@
 		D5EFBD562B8CA6AA005F6F9B /* MVP-UI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MVP-UI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5EFBD592B8CA6AA005F6F9B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D5EFBD5B2B8CA6AA005F6F9B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D5EFBD5D2B8CA6AA005F6F9B /* AutorizationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutorizationViewController.swift; sourceTree = "<group>"; };
 		D5EFBD622B8CA6B0005F6F9B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D5EFBD672B8CA6B0005F6F9B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D5EFBD712B8CD621005F6F9B /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
@@ -167,6 +165,7 @@
 		D5F979252BA118FD0034AE5B /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		D5F979282BA119D30034AE5B /* RecipeDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDTO.swift; sourceTree = "<group>"; };
 		D5F9792A2BA11A820034AE5B /* RecipeCommonInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCommonInfo.swift; sourceTree = "<group>"; };
+		DAE902AF2BB51C6400D269A8 /* MyLibrary */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = MyLibrary; sourceTree = "<group>"; };
 		F8A6B0908E2FE4DCD39095B1 /* Pods_MVP_UI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MVP_UI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -524,7 +523,6 @@
 		D571F5442B8D0DF800BAE03F /* View */ = {
 			isa = PBXGroup;
 			children = (
-				D5EFBD5D2B8CA6AA005F6F9B /* AutorizationViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -541,6 +539,7 @@
 		D5EFBD4D2B8CA6AA005F6F9B = {
 			isa = PBXGroup;
 			children = (
+				DAE902AF2BB51C6400D269A8 /* MyLibrary */,
 				D5EFBD582B8CA6AA005F6F9B /* MVP-UI */,
 				D5EFBD572B8CA6AA005F6F9B /* Products */,
 				B47F958F2F730881087E4F9C /* Pods */,
@@ -760,7 +759,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D5EFBD5E2B8CA6AA005F6F9B /* AutorizationViewController.swift in Sources */,
 				D571D47F2B8D576C000757E9 /* UserProfilePresenter.swift in Sources */,
 				10A264742BA188A7009D7757 /* RecipeDetail.swift in Sources */,
 				D509B3072B97C90B00C094E2 /* ShimerCollectionViewCell.swift in Sources */,
