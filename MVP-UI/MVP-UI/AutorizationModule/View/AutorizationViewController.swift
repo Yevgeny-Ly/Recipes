@@ -1,6 +1,7 @@
 // AutorizationViewController.swift
 // Copyright © RoadMap. All rights reserved.
 
+import MyLibrary
 import UIKit
 
 /// Экран с авторизацией пользователя
@@ -29,7 +30,8 @@ final class AutorizationViewController: UIViewController {
 
     private let loginTitleLabel = UILabel()
     private let passwordLabel = UILabel()
-    private let loginTextField = UITextField()
+//    private let loginTextField = UITextField()
+    private let loginTextField = MyLibrary.AutorizationTextField()
     private let errorLoginLabel = UILabel()
     private let errorPasswordLabel = UILabel()
     private let passwordTextField = UITextField()

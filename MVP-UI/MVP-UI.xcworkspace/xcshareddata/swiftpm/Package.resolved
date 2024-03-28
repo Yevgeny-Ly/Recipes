@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "mylibrary3",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Yevgeny-Ly/MyLibrary3.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "0cab393cd8f7eeb7f0ff55a9cae145e3f0ec5d00"
+      }
+    }
+  ],
+  "version" : 2
+}
