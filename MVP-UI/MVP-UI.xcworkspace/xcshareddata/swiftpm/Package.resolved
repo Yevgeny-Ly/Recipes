@@ -5,8 +5,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/Yevgeny-Ly/MyLibrary3.git",
       "state" : {
-        "branch" : "main",
-        "revision" : "0cab393cd8f7eeb7f0ff55a9cae145e3f0ec5d00"
+        "revision" : "30e08a1e71ac9ddffc7671c11f1bd09fb822a4bb",
+        "version" : "1.0.4"
       }
     }
   ],
