@@ -30,11 +30,10 @@ final class AutorizationViewController: UIViewController {
 
     private let loginTitleLabel = UILabel()
     private let passwordLabel = UILabel()
-//    private let loginTextField = UITextField()
-    private let loginTextField = MyLibrary.AutorizationTextField()
+    private let loginTextField = AutorizationTextField()
+    private let passwordTextField = AutorizationTextField()
     private let errorLoginLabel = UILabel()
     private let errorPasswordLabel = UILabel()
-    private let passwordTextField = UITextField()
     private lazy var chekButton: UIButton = {
         let button = UIButton()
         button.backgroundColor = Constants.loginButtonColor
