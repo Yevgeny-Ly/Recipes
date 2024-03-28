@@ -22,6 +22,8 @@
 		930856082B908DE1009E71DE /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 930856072B908DE1009E71DE /* Storage.swift */; };
 		9308560A2B9091E0009E71DE /* RecipiesViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 930856092B9091E0009E71DE /* RecipiesViewCell.swift */; };
 		9308560E2B9116C8009E71DE /* SizeCellCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9308560D2B9116C8009E71DE /* SizeCellCategory.swift */; };
+		931B595F2BB4C336006FAF86 /* MyLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = 931B595E2BB4C336006FAF86 /* MyLibrary */; };
+		931B59622BB4EF43006FAF86 /* MyLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = 931B59612BB4EF43006FAF86 /* MyLibrary */; };
 		934AE16E2B9600FE0060E699 /* TermsPrivatePolicyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934AE16D2B9600FE0060E699 /* TermsPrivatePolicyView.swift */; };
 		93658E342B8E0842006BAF05 /* ProfileHeaderCellSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93658E332B8E0842006BAF05 /* ProfileHeaderCellSource.swift */; };
 		93658E362B8E452E006BAF05 /* HeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93658E352B8E452E006BAF05 /* HeaderTableViewCell.swift */; };
@@ -173,6 +175,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				931B59622BB4EF43006FAF86 /* MyLibrary in Frameworks */,
+				931B595F2BB4C336006FAF86 /* MyLibrary in Frameworks */,
 				053CF43FD3E3A52CC48D33DC /* Pods_MVP_UI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -614,6 +618,10 @@
 			dependencies = (
 			);
 			name = "MVP-UI";
+			packageProductDependencies = (
+				931B595E2BB4C336006FAF86 /* MyLibrary */,
+				931B59612BB4EF43006FAF86 /* MyLibrary */,
+			);
 			productName = "MVP-UI";
 			productReference = D5EFBD562B8CA6AA005F6F9B /* MVP-UI.app */;
 			productType = "com.apple.product-type.application";
@@ -642,6 +650,9 @@
 				Base,
 			);
 			mainGroup = D5EFBD4D2B8CA6AA005F6F9B;
+			packageReferences = (
+				931B59602BB4EF43006FAF86 /* XCRemoteSwiftPackageReference "MyLibrary3" */,
+			);
 			productRefGroup = D5EFBD572B8CA6AA005F6F9B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -1030,6 +1041,29 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		931B59602BB4EF43006FAF86 /* XCRemoteSwiftPackageReference "MyLibrary3" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Yevgeny-Ly/MyLibrary3.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		931B595E2BB4C336006FAF86 /* MyLibrary */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = MyLibrary;
+		};
+		931B59612BB4EF43006FAF86 /* MyLibrary */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 931B59602BB4EF43006FAF86 /* XCRemoteSwiftPackageReference "MyLibrary3" */;
+			productName = MyLibrary;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		10BBAC612BA654D100FF93D9 /* CoreData.xcdatamodeld */ = {
