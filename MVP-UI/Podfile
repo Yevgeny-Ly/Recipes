@@ -9,6 +9,10 @@ target 'MVP-UI' do
   
 use_frameworks!
 pod 'KeychainSwift'
+pod 'SwiftGen','~> 6.0'
+pod 'XcodeGen', :git => 'https://github.com/yonaskolb/XcodeGen'
+
+
 
 platform :ios, '15.0'
 

@@ -1,0 +1,11 @@
+/* 
+  Localizable.strings
+  MVP-UI
+  
+*/
+
+"AutorizationViewController.loginTitle" = "Email Address";
+"AutorizationViewController.passwordTitle" = "Password";
+"AutorizationViewController.loginPlaceholderTitle" = "Enter Email Address";
+"AutorizationViewController.passwordPlaceholderTitle" = "Enter Password";
+"AutorizationViewController.title" = "Login";

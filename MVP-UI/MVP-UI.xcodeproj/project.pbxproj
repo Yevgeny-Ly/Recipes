@@ -30,6 +30,8 @@
 		936DC2572B91F7E100B0D755 /* RecipesDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936DC2562B91F7E100B0D755 /* RecipesDetailsViewController.swift */; };
 		936DC25A2B91F83000B0D755 /* DetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936DC2592B91F83000B0D755 /* DetailsPresenter.swift */; };
 		936DC25D2B91F87500B0D755 /* DetailsHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936DC25C2B91F87500B0D755 /* DetailsHeaderCell.swift */; };
+		937327CA2BB6B8E600F405E2 /* Strings+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937327C92BB6B8E600F405E2 /* Strings+Generated.swift */; };
+		937327CC2BB6B91B00F405E2 /* swiftgen.yml in Resources */ = {isa = PBXBuildFile; fileRef = 937327CB2BB6B91B00F405E2 /* swiftgen.yml */; };
 		937B275A2B9469E300976E4C /* DescriptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937B27592B9469E300976E4C /* DescriptionCell.swift */; };
 		93883DAC2BA2D77900E315F6 /* ViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93883DAB2BA2D77900E315F6 /* ViewState.swift */; };
 		93883DAE2BA388C000E315F6 /* StateShimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93883DAD2BA388C000E315F6 /* StateShimer.swift */; };
@@ -43,6 +45,7 @@
 		9389C0592BA2006600A0683E /* ImagesDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9389C0582BA2006600A0683E /* ImagesDTO.swift */; };
 		9389C05B2BA200AA00A0683E /* ComponentsImageDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9389C05A2BA200AA00A0683E /* ComponentsImageDTO.swift */; };
 		9389C05D2BA200DE00A0683E /* TotalDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9389C05C2BA200DE00A0683E /* TotalDTO.swift */; };
+		93AB759E2BB621BA001566F5 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 93AB759D2BB621BA001566F5 /* Localizable.strings */; };
 		93B976592B99C42600A137DC /* ServiceLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B976582B99C42600A137DC /* ServiceLog.swift */; };
 		93BCB2EB2BA24F3D0037BCFD /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BCB2EA2BA24F3D0037BCFD /* UIImageView+Extension.swift */; };
 		93D301052B8F80780035D421 /* BonusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D301042B8F80780035D421 /* BonusViewController.swift */; };
@@ -110,6 +113,8 @@
 		936DC2562B91F7E100B0D755 /* RecipesDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesDetailsViewController.swift; sourceTree = "<group>"; };
 		936DC2592B91F83000B0D755 /* DetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsPresenter.swift; sourceTree = "<group>"; };
 		936DC25C2B91F87500B0D755 /* DetailsHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsHeaderCell.swift; sourceTree = "<group>"; };
+		937327C92BB6B8E600F405E2 /* Strings+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Strings+Generated.swift"; sourceTree = "<group>"; };
+		937327CB2BB6B91B00F405E2 /* swiftgen.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = swiftgen.yml; sourceTree = "<group>"; };
 		937B27592B9469E300976E4C /* DescriptionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionCell.swift; sourceTree = "<group>"; };
 		93883DAB2BA2D77900E315F6 /* ViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewState.swift; sourceTree = "<group>"; };
 		93883DAD2BA388C000E315F6 /* StateShimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StateShimer.swift; sourceTree = "<group>"; };
@@ -123,6 +128,7 @@
 		9389C0582BA2006600A0683E /* ImagesDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesDTO.swift; sourceTree = "<group>"; };
 		9389C05A2BA200AA00A0683E /* ComponentsImageDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentsImageDTO.swift; sourceTree = "<group>"; };
 		9389C05C2BA200DE00A0683E /* TotalDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalDTO.swift; sourceTree = "<group>"; };
+		93AB759D2BB621BA001566F5 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		93B976582B99C42600A137DC /* ServiceLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceLog.swift; sourceTree = "<group>"; };
 		93BCB2EA2BA24F3D0037BCFD /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
 		93D301042B8F80780035D421 /* BonusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BonusViewController.swift; sourceTree = "<group>"; };
@@ -295,6 +301,14 @@
 				D509B3002B97B95A00C094E2 /* ShimerViewCell.swift */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		93AB759C2BB6213F001566F5 /* Generated */ = {
+			isa = PBXGroup;
+			children = (
+				937327C92BB6B8E600F405E2 /* Strings+Generated.swift */,
+			);
+			path = Generated;
 			sourceTree = "<group>";
 		};
 		93B976572B99C2B900A137DC /* Service */ = {
@@ -541,6 +555,7 @@
 		D5EFBD4D2B8CA6AA005F6F9B = {
 			isa = PBXGroup;
 			children = (
+				937327CB2BB6B91B00F405E2 /* swiftgen.yml */,
 				D5EFBD582B8CA6AA005F6F9B /* MVP-UI */,
 				D5EFBD572B8CA6AA005F6F9B /* Products */,
 				B47F958F2F730881087E4F9C /* Pods */,
@@ -559,6 +574,7 @@
 		D5EFBD582B8CA6AA005F6F9B /* MVP-UI */ = {
 			isa = PBXGroup;
 			children = (
+				93AB759C2BB6213F001566F5 /* Generated */,
 				10BBAC612BA654D100FF93D9 /* CoreData.xcdatamodeld */,
 				D5EFBD592B8CA6AA005F6F9B /* AppDelegate.swift */,
 				D5EFBD5B2B8CA6AA005F6F9B /* SceneDelegate.swift */,
@@ -578,6 +594,7 @@
 				D5EFBD732B8CD7E4005F6F9B /* TabBarViewController */,
 				D5EFBD622B8CA6B0005F6F9B /* Assets.xcassets */,
 				D5EFBD672B8CA6B0005F6F9B /* Info.plist */,
+				93AB759D2BB621BA001566F5 /* Localizable.strings */,
 			);
 			path = "MVP-UI";
 			sourceTree = "<group>";
@@ -607,6 +624,7 @@
 			buildPhases = (
 				8D1C3C70DB8B8E2F530102C3 /* [CP] Check Pods Manifest.lock */,
 				D5EFBD6F2B8CB09C005F6F9B /* swiftFormat */,
+				93AB759B2BB61F24001566F5 /* swiftGen */,
 				D5EFBD702B8CB0D9005F6F9B /* swiftLint */,
 				D5EFBD522B8CA6AA005F6F9B /* Sources */,
 				D5EFBD532B8CA6AA005F6F9B /* Frameworks */,
@@ -668,6 +686,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				D5EFBD632B8CA6B0005F6F9B /* Assets.xcassets in Resources */,
+				93AB759E2BB621BA001566F5 /* Localizable.strings in Resources */,
+				937327CC2BB6B91B00F405E2 /* swiftgen.yml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -712,6 +732,24 @@
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
+		};
+		93AB759B2BB61F24001566F5 /* swiftGen */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = swiftGen;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif [[ -f \"${PODS_ROOT}/SwiftGen/bin/swiftgen\" ]]; then \n\n  \"${PODS_ROOT}/SwiftGen/bin/swiftgen\"\nelse \n  echo \"warning: SwiftGen is not installed. Run 'pod install --repo-update' to install it.\" \nfi\n";
 		};
 		D5EFBD6F2B8CB09C005F6F9B /* swiftFormat */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -810,6 +848,7 @@
 				D571D4712B8D3E3C000757E9 /* AppCoordinator.swift in Sources */,
 				10BBAC2E2BA3A9AB00FF93D9 /* LoadServiceProtocol.swift in Sources */,
 				D5F9792B2BA11A820034AE5B /* RecipeCommonInfo.swift in Sources */,
+				937327CA2BB6B8E600F405E2 /* Strings+Generated.swift in Sources */,
 				936DC25A2B91F83000B0D755 /* DetailsPresenter.swift in Sources */,
 				10575E1C2BA33F8E0023F322 /* ShimerHeaderViewCell.swift in Sources */,
 				D571AE8C2B9D027900EC9B2E /* FavoritesService.swift in Sources */,
