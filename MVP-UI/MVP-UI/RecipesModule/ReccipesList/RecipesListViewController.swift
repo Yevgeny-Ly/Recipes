@@ -79,10 +79,10 @@ final class RecipesListViewController: UIViewController {
         super.viewDidLoad()
         configureUI()
         navigationController?.navigationBar.tintColor = .black
-        if let logURL = FileManager.default.urls(
+        if (FileManager.default.urls(
             for: .documentDirectory,
             in: .userDomainMask
-        ).first?.appendingPathComponent("log.txt") {
+        ).first?.appendingPathComponent("log.txt")) != nil {
         } else {}
     }
 
@@ -240,7 +240,7 @@ extension RecipesListViewController: UITableViewDelegate {
         ).first?.appendingPathComponent("log.txt") {
             LogAction.userOpenRecipe(recipe.label).log(fileURL: logURL)
             do {
-                let logContent = try String(contentsOf: logURL)
+                _ = try String(contentsOf: logURL)
             } catch {}
         }
 
