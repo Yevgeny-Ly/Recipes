@@ -1,0 +1,29 @@
+/* 
+  Localizable.strings
+  MVP-UI
+  
+*/
+
+"AutorizationViewController.loginTitle" = "Email Address";
+"AutorizationViewController.passwordTitle" = "Password";
+"AutorizationViewController.loginPlaceholderTitle" = "Enter Email Address";
+"AutorizationViewController.passwordPlaceholderTitle" = "Enter Password";
+"AutorizationViewController.title" = "Login";
+
+"BonusViewController.titleYourBonuses" = "Your bonuses";
+"BonusViewController.titleBonusPayment" = "100";
+
+"TermsPrivatePolicyView.titleTermsOfUse" = "Terms of Use";
+
+"UserProfileViewController.alertTitle" = "Change your name and surname";
+"UserProfileViewController.cancelAlertButton" = "Cancel";
+"UserProfileViewController.placeholderAlert" = "Name Surname";
+"UserProfileViewController.doneButton" = "Ok";
+
+"RecipesDetailsViewController.titleArrowBackward" = "arrowBackward";
+"RecipesDetailsViewController.titleNoFavorites" = "noFavorite";
+"RecipesDetailsViewController.titleShared" = "shared";
+"RecipesDetailsViewController.isFavorite" = "isFavorite";
+
+"RecipesViewController.titleRecipesItem" = "Recipes";
+
