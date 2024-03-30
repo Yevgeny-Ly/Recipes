@@ -10,6 +10,7 @@ final class TermsPrivatePolicyView: UIView {
     enum Constants {
         static var fontVerdana = "Verdana"
         static var fontVerdanaBold = "Verdana-Bold"
+        static var titleTermsOfUse = "Terms of Use"
         static var titlePrivatePolicy = "Welcome to our recipe app! We're thrilled to\n" +
             "have you on board. To ensure a delightful\n" +
             "experience for everyone, please take a moment to\n" +
@@ -64,7 +65,7 @@ final class TermsPrivatePolicyView: UIView {
 
     private let termsOfUseLabel: UILabel = {
         let label = UILabel()
-        label.text = Local.TermsPrivatePolicyView.titleTermsOfUse
+        label.text = Constants.titleTermsOfUse
         label.font = UIFont(name: Constants.fontVerdanaBold, size: 20)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label

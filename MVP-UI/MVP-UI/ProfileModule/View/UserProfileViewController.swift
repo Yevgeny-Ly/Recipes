@@ -24,6 +24,10 @@ final class UserProfileViewController: UIViewController {
     enum Constants {
         static let titleNotices = "Profile"
         static let nameRegisterCell = "Cell"
+        static let alertTitle = "Change your name and surname"
+        static let cancelAlertButton = "Cancel"
+        static let placeholderAlert = "Name Surname"
+        static let doneButton = "Ok"
         static let timer: CGFloat = 2
     }
 
@@ -196,7 +200,7 @@ extension UserProfileViewController: UserProfileViewInputProtocol {
 
         termsPrivacyPolicyView?.handler = { [weak self] in
             self?.visualEffectView?.isUserInteractionEnabled = false
-            _ = UIViewPropertyAnimator(duration: 1, dampingRatio: 1) {
+            let blurAnimation = UIViewPropertyAnimator(duration: 1, dampingRatio: 1) {
                 self?.visualEffectView?.effect = nil
             }
             blurAnimator.startAnimation()
@@ -240,20 +244,16 @@ extension UserProfileViewController: UserProfileViewInputProtocol {
     }
 
     func showAlertChangeName() {
-        let alert = UIAlertController(
-            title: Local.UserProfileViewController.alertTitle,
-            message: nil,
-            preferredStyle: .alert
-        )
-        let confirmAction = UIAlertAction(title: Local.UserProfileViewController.doneButton, style: .default) { _ in
+        let alert = UIAlertController(title: Constants.alertTitle, message: nil, preferredStyle: .alert)
+        let confirmAction = UIAlertAction(title: Constants.doneButton, style: .default) { _ in
             if let text = alert.textFields?.first?.text {
                 self.presenter?.updateUserName(withName: text)
             }
         }
 
-        let cancelAction = UIAlertAction(title: Local.UserProfileViewController.cancelAlertButton, style: .default)
+        let cancelAction = UIAlertAction(title: Constants.cancelAlertButton, style: .default)
         alert.addTextField { textField in
-            textField.placeholder = Local.UserProfileViewController.placeholderAlert
+            textField.placeholder = Constants.placeholderAlert
         }
         alert.addAction(confirmAction)
         alert.addAction(cancelAction)

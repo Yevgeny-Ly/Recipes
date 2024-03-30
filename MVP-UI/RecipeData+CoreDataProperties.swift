@@ -4,6 +4,7 @@
 import CoreData
 import Foundation
 
+///
 @objc(RecipeData)
 public class RecipeData: NSManagedObject {}
 ///

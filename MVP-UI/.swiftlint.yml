@@ -20,9 +20,8 @@ opt_in_rules:
   
 excluded:
   - Pods
-  - Recipies
 
-warning_threshold: 10
+warning_threshold: 1
 
 line_length:
   warning: 120

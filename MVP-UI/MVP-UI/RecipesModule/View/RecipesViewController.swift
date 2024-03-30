@@ -16,6 +16,7 @@ final class RecipesViewController: UIViewController {
     // MARK: - Constants
 
     enum Constants {
+        static let titleRecipesItem = "Recipes"
         static let minimumLineSpacing: CGFloat = 15
         static let widthSmallCell: CGFloat = 40
         static let heightSmallCell: CGFloat = 40
@@ -77,7 +78,7 @@ final class RecipesViewController: UIViewController {
     }
 
     private func makeNavigationBar() {
-        title = Local.RecipesViewController.titleRecipesItem
+        title = Constants.titleRecipesItem
         navigationController?.navigationBar.prefersLargeTitles = true
     }
 

@@ -99,7 +99,7 @@ final class RecipiesViewCell: UICollectionViewCell {
             logAction.log(fileURL: logURL)
 
             do {
-                _ = try String(contentsOf: logURL)
+                let logContent = try String(contentsOf: logURL)
             } catch {}
         } else {}
     }
