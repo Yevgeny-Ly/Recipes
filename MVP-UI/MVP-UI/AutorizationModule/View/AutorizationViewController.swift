@@ -9,7 +9,6 @@ final class AutorizationViewController: UIViewController {
     // MARK: - Constants
 
     private enum Constants {
-//        static let title = "Login"
         static let titleColor = UIColor(named: "сolorIconTabBar")
         static let topGradientColor = UIColor.white.cgColor
         static let bottomGradientColor = UIColor(named: "bottomGradientColor")?.cgColor
