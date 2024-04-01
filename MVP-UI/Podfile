@@ -22,3 +22,15 @@ end
 platform :ios, '15.0'
 
 end
+
+target 'RecipiesMock' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for RecipiesMock
+  
+use_frameworks!
+pod 'KeychainSwift'
+pod 'SwiftGen','~> 6.0'
+
+end
