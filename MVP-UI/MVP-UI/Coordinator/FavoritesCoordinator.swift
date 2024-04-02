@@ -7,6 +7,11 @@ import UIKit
 /// Координатор для экрана с избарнным
 final class FavoritesCoordinator: BaseCoordinator {
     var rootViewController: UINavigationController?
+    var networkService: NetworkService
+
+    init(networkService: NetworkService) {
+        self.networkService = networkService
+    }
 
     func setRootController(viewController: UIViewController) {
         rootViewController = UINavigationController(rootViewController: viewController)
@@ -18,7 +23,7 @@ final class FavoritesCoordinator: BaseCoordinator {
             view: recipesDetailsViewController,
             recipe: recipe,
             recipesCoordinator:
-            self
+            self, networkService: networkService
         )
         recipesDetailsViewController.detailsPresenter = presenter
         rootViewController?.pushViewController(recipesDetailsViewController, animated: true)

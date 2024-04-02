@@ -7,6 +7,14 @@ import UIKit
 /// Координатор для экрана с рецептами
 final class RecipesCoordinator: BaseCoordinator {
     var rootViewController: UINavigationController?
+    var networkService: NetworkService
+    var coreDataManager: CoreDataManager
+
+    init(networkService: NetworkService, coreDataManager: CoreDataManager) {
+        self.networkService = networkService
+        self.coreDataManager = coreDataManager
+    }
+
     func setRootController(viewController: UIViewController) {
         rootViewController = UINavigationController(rootViewController: viewController)
     }
@@ -16,7 +24,7 @@ final class RecipesCoordinator: BaseCoordinator {
         let presenter = RecipePresenter(
             view: recipiesViewController,
             category: category,
-            detailsRecipeCoordinator: self
+            detailsRecipeCoordinator: self, networkService: networkService, coreDataManager: coreDataManager
         )
         recipiesViewController.recipePresenter = presenter
         rootViewController?.pushViewController(recipiesViewController, animated: true)
@@ -25,7 +33,12 @@ final class RecipesCoordinator: BaseCoordinator {
 
     func pushRecipeDetailsViewController(recipe: RecipeCommonInfo) {
         let recipesDetailsViewController = RecipesDetailsViewController()
-        let presenter = DetailsPresenter(view: recipesDetailsViewController, recipe: recipe, recipesCoordinator: self)
+        let presenter = DetailsPresenter(
+            view: recipesDetailsViewController,
+            recipe: recipe,
+            recipesCoordinator: self,
+            networkService: networkService
+        )
         recipesDetailsViewController.detailsPresenter = presenter
         rootViewController?.pushViewController(recipesDetailsViewController, animated: true)
     }

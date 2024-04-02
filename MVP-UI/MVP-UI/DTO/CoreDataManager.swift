@@ -5,6 +5,7 @@
 // Copyright © RoadMap. All rights reserved.
 
 import CoreData
+import Swinject
 import UIKit
 
 /// Протокол для работы с кор датоой
@@ -27,14 +28,6 @@ public final class CoreDataManager: CoreDataManagerProtocol {
         static let recipeDateEntity = "RecipeData"
         static let detailRecipeDateEntity = "DetailsRecipesData"
     }
-
-    // MARK: - Public Properties
-
-    public static let shared = CoreDataManager()
-
-    // MARK: - Init
-
-    private init() {}
 
     // MARK: - Private Properties
 

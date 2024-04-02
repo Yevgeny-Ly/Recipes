@@ -31,15 +31,21 @@ final class DetailsPresenter {
     private weak var view: DetailsViewInputProtocol?
     private var recipe: RecipeCommonInfo
     private var isFavorites = false
-    private let networkService = NetworkService()
+    private let networkService: NetworkService
     private var recipeDetail: RecipeDetail?
 
     // MARK: - Initializers
 
-    init(view: DetailsViewInputProtocol, recipe: RecipeCommonInfo, recipesCoordinator: BaseCoordinator) {
+    init(
+        view: DetailsViewInputProtocol,
+        recipe: RecipeCommonInfo,
+        recipesCoordinator: BaseCoordinator,
+        networkService: NetworkService
+    ) {
         self.view = view
         self.recipe = recipe
         self.recipesCoordinator = recipesCoordinator
+        self.networkService = networkService
         parsingDetail()
     }
 }
