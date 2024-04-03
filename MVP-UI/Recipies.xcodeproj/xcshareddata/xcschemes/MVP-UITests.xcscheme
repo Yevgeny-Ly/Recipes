@@ -22,20 +22,6 @@
                BlueprintName = "MVP-UITests"
                ReferencedContainer = "container:Recipies.xcodeproj">
             </BuildableReference>
-            <SelectedTests>
-               <Test
-                  Identifier = "MVPUITests/testGetDetailFailure()">
-               </Test>
-               <Test
-                  Identifier = "MVPUITests/testGetDetailSuccess()">
-               </Test>
-               <Test
-                  Identifier = "MVPUITests/testGetRecipeFailure()">
-               </Test>
-               <Test
-                  Identifier = "MVPUITests/testGetRecipeSuccess()">
-               </Test>
-            </SelectedTests>
          </TestableReference>
       </Testables>
    </TestAction>

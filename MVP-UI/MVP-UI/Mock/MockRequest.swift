@@ -1,8 +1,5 @@
-//
-//  MockRequest.swift
-//  MVP-UITests
-//
-//
+// MockRequest.swift
+// Copyright © RoadMap. All rights reserved.
 
 import UIKit
 
@@ -14,11 +11,11 @@ protocol RequestCreatorProtocol {
 
 final class MockRequest: RequestCreatorProtocol {
     // MARK: - Constants
-    
+
     private enum Constants {
         static let scheme = "https"
         static let host = "api.edamam.com"
-        static let path = "/api/recipes/v2"
+        static let path = "/api/recipes/v"
         static let detailPath = "/api/recipes/v2/by-uri"
         static let componentsTypeKey = "type"
         static let identefire = "app_id"
@@ -30,7 +27,7 @@ final class MockRequest: RequestCreatorProtocol {
         static let dishType = "dishType"
         static let uriTitle = "uri"
     }
-    
+
     private var component = URLComponents()
     private let scheme = Constants.scheme
     private let host = Constants.host
@@ -44,7 +41,7 @@ final class MockRequest: RequestCreatorProtocol {
             URLQueryItem(name: Constants.componentsDishTypeKey, value: type.discription)
         ]
     }
-    
+
     func createURLComponents(type: DishType) {
         component.scheme = scheme
         component.host = host

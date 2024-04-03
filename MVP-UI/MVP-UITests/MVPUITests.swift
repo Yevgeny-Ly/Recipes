@@ -1,6 +1,7 @@
 // MVPUITests.swift
 // Copyright © RoadMap. All rights reserved.
 
+@testable import MVP_UI
 import XCTest
 
 final class MVPUITests: XCTestCase {
