@@ -161,6 +161,8 @@
 		8E9D0824282E234F85370F51 /* LoadServiceImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0785FBF480137B9EA8A759 /* LoadServiceImage.swift */; };
 		8FAB7D4C55EA1C293177B64B /* DetailsHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5EAF8DB7859A85D0D4F4C9 /* DetailsHeaderCell.swift */; };
 		9204633A8ABA7CC29B770F62 /* SizeCellCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E3DECE0049175462F43194 /* SizeCellCategory.swift */; };
+		93421DC72BBD649700B4E2B0 /* MockRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B426672BBD3F8300896CCC /* MockRequest.swift */; };
+		93421DC82BBD649800B4E2B0 /* MockRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B426672BBD3F8300896CCC /* MockRequest.swift */; };
 		93AFD5742BBC996700749105 /* CoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6BE9C7913F450005A9080AD6 /* CoreData.xcdatamodeld */; };
 		93AFD5752BBC996800749105 /* CoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6BE9C7913F450005A9080AD6 /* CoreData.xcdatamodeld */; };
 		93B426682BBD3F8300896CCC /* MockRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B426672BBD3F8300896CCC /* MockRequest.swift */; };
@@ -401,6 +403,7 @@
 				E6318E8F41383B4B147440A0 /* MockFileName.swift */,
 				E47171A91325C17E0607E82E /* URL.swift */,
 				93B426672BBD3F8300896CCC /* MockRequest.swift */,
+				C346E2D37BB5B6A78B895CBA /* recipies.json */,
 			);
 			path = Mock;
 			sourceTree = "<group>";
@@ -603,11 +606,10 @@
 			isa = PBXGroup;
 			children = (
 				855B34AE2A56A52B4F7F8A27 /* AppDelegate.swift */,
+				E2B042ADD80ABCB64539F235 /* SceneDelegate.swift */,
 				E6E282C23800A02A91D711A6 /* Assets.xcassets */,
 				5EB4F5127FECAAE282F271B8 /* Info.plist */,
 				0C2A42A5EE6BE62E4EBBC869 /* Localizable.strings */,
-				C346E2D37BB5B6A78B895CBA /* recipies.json */,
-				E2B042ADD80ABCB64539F235 /* SceneDelegate.swift */,
 				6D9F0BD7E99FCF160942A410 /* AppBuilder */,
 				1663EA381763340BD7637A50 /* AutorizationModule */,
 				1BEF8F0204AB81BDFAF59C47 /* Coordinator */,
@@ -1367,6 +1369,7 @@
 				28C738A072A442E0CB899506 /* User.swift in Sources */,
 				EDEDB018EC23C3831C583C03 /* UserProfileCoordinator.swift in Sources */,
 				2201AF1EE35AD0A3541F1725 /* UserProfilePresenter.swift in Sources */,
+				93421DC82BBD649800B4E2B0 /* MockRequest.swift in Sources */,
 				B8B344CB97741365E056E994 /* UserProfileViewController.swift in Sources */,
 				AD821438FF19B7EBBC4BDB4E /* ViewState.swift in Sources */,
 			);
@@ -1539,6 +1542,7 @@
 				23305CDB4FD2126DA0DA9955 /* User.swift in Sources */,
 				FEB92B6AD10588E8D0D2A669 /* UserProfileCoordinator.swift in Sources */,
 				E37EE8B5CC43F4C1BBF6CCC3 /* UserProfilePresenter.swift in Sources */,
+				93421DC72BBD649700B4E2B0 /* MockRequest.swift in Sources */,
 				228194CE7D336AD831310D62 /* UserProfileViewController.swift in Sources */,
 				3FDCAE754D534AD93299D44A /* ViewState.swift in Sources */,
 			);
