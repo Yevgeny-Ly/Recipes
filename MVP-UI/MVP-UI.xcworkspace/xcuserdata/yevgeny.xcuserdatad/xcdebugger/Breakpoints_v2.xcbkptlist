@@ -80,6 +80,21 @@
                   endingLineNumber = "313"
                   offsetFromSymbolStart = "116">
                </Location>
+               <Location
+                  uuid = "BEF6742B-BF02-4904-9EAE-12D2B96D2AF9 - df6226ad281248c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MVP_UI.RecipesDetailsViewController.getDetail(recipe: MVP_UI.RecipeDetail) -&gt; ()"
+                  moduleName = "MVP-UI"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yevgeny/Documents/SwiftPlayground/%D0%9E%D0%B1%D1%83%D1%87%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%96%D0%B5%D0%BD%D1%8F%20%D0%97%D0%B2%D0%B5%D1%80%D0%B8%D0%BA/GitHub/Recipies/MVP-UI/MVP-UI/RecipesModule/RecipesDetails/RecipesDetailsViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "313"
+                  endingLineNumber = "313"
+                  offsetFromSymbolStart = "116">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>

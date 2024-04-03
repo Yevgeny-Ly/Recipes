@@ -1,6 +1,7 @@
 // SceneDelegate.swift
 // Copyright © RoadMap. All rights reserved.
 
+import Swinject
 import UIKit
 
 final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
@@ -18,9 +19,14 @@ final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     private func configureSceneDelegate(windowScene: UIWindowScene) {
         window = UIWindow(windowScene: windowScene)
+
+        let serviceDistributor = Container()
+        let builder = AppBulder(serviceDistributor: serviceDistributor)
+
         if let window {
             window.makeKeyAndVisible()
-            applicationCoordinator = ApplicationCoordinator()
+            applicationCoordinator = ApplicationCoordinator(appBuilder: builder, container: serviceDistributor)
+            builder.makeContainer()
             applicationCoordinator?.start()
         }
     }

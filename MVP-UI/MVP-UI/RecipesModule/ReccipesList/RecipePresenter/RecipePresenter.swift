@@ -55,7 +55,8 @@ final class RecipePresenter {
     private var recipeCommonInfo: [RecipeCommonInfo]?
     private var sortedCalories = SortedCalories.non
     private var sortedTime = SortedTime.non
-    private var networkService = NetworkService()
+    private var networkService: NetworkService
+    private var coreDataManager: CoreDataManager
 
     var state: ViewState<[RecipeCommonInfo]> = .loading {
         didSet {
@@ -65,10 +66,18 @@ final class RecipePresenter {
 
     // MARK: - Initializers
 
-    init(view: RecipesViewProtocol, category: Category, detailsRecipeCoordinator: RecipesCoordinator) {
+    init(
+        view: RecipesViewProtocol,
+        category: Category,
+        detailsRecipeCoordinator: RecipesCoordinator,
+        networkService: NetworkService,
+        coreDataManager: CoreDataManager
+    ) {
         self.view = view
         self.category = category
         self.detailsRecipeCoordinator = detailsRecipeCoordinator
+        self.networkService = networkService
+        self.coreDataManager = coreDataManager
         parseRecipes()
     }
 
@@ -115,7 +124,7 @@ final class RecipePresenter {
 
 extension RecipePresenter: RecipeProtocol {
     func parseRecipes() {
-        self.view?.getHeaderTitle(type: self.category.categoryTitle)
+        view?.getHeaderTitle(type: category.categoryTitle)
         networkService.getRecipe(type: category.categoryTitle) { [weak self] result in
             guard let self else { return }
             DispatchQueue.main.async {
@@ -126,12 +135,13 @@ extension RecipePresenter: RecipeProtocol {
                     self.view?.getRecipes(recipes: self.recipeCommonInfo ?? [])
                     guard let recipes = self.recipeCommonInfo else { return }
                     for item in recipes {
-                        CoreDataManager.shared.createRecipe(recipe: item, dishTitle: self.category.categoryTitle)
+                        self.coreDataManager.createRecipe(recipe: item, dishTitle: self.category.categoryTitle)
                     }
                 case let .failure(error):
                     self.state = .error(error)
                     DispatchQueue.main.async {
-                        self.recipeCommonInfo = CoreDataManager.shared.fetchRecipe(dishTitle: self.category.categoryTitle)
+                        self.recipeCommonInfo = self.coreDataManager
+                            .fetchRecipe(dishTitle: self.category.categoryTitle)
                         guard let done = self.recipeCommonInfo else { return }
                         self.state = !done.isEmpty ? .data(done) : .noData
                         self.view?.getRecipes(recipes: done)
