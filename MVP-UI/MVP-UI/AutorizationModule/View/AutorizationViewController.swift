@@ -1,6 +1,7 @@
 // AutorizationViewController.swift
 // Copyright © RoadMap. All rights reserved.
 
+import MyLibrary
 import UIKit
 
 /// Экран с авторизацией пользователя
@@ -8,14 +9,9 @@ final class AutorizationViewController: UIViewController {
     // MARK: - Constants
 
     private enum Constants {
-        static let title = "Login"
         static let titleColor = UIColor(named: "сolorIconTabBar")
         static let topGradientColor = UIColor.white.cgColor
         static let bottomGradientColor = UIColor(named: "bottomGradientColor")?.cgColor
-        static let loginTitle = "Email Address"
-        static let passwordTitle = "Password"
-        static let loginPlaceholderTitle = "Enter Email Address"
-        static let passwordPlaceholderTitle = "Enter Password"
         static let leftLoginIcon = UIImage.mailIcon
         static let leftPasswordIcon = UIImage.passwordIcon
         static let loginButtonColor = UIColor(named: "logInButtonColor")
@@ -29,15 +25,15 @@ final class AutorizationViewController: UIViewController {
 
     private let loginTitleLabel = UILabel()
     private let passwordLabel = UILabel()
-    private let loginTextField = UITextField()
+    private let loginTextField = AutorizationTextField()
+    private let passwordTextField = AutorizationTextField()
     private let errorLoginLabel = UILabel()
     private let errorPasswordLabel = UILabel()
-    private let passwordTextField = UITextField()
     private lazy var chekButton: UIButton = {
         let button = UIButton()
         button.backgroundColor = Constants.loginButtonColor
         button.tintColor = .white
-        button.setTitle(Constants.title, for: .normal)
+        button.setTitle(Local.AutorizationViewController.title, for: .normal)
         button.layer.cornerRadius = 12
         button.addTarget(self, action: #selector(tappedButton), for: .touchUpInside)
         return button
@@ -81,7 +77,7 @@ final class AutorizationViewController: UIViewController {
     private func configureNavigationBar() {
         addTapGestureToHideKeyboard()
         view.backgroundColor = .white
-        title = Constants.title
+        title = Local.AutorizationViewController.title
         navigationController?.navigationBar
             .largeTitleTextAttributes =
             [NSAttributedString.Key.foregroundColor: Constants.titleColor ?? UIColor.black]
@@ -97,16 +93,16 @@ final class AutorizationViewController: UIViewController {
 
     private func configureUI() {
         makeGradient()
-        makeLabel(label: loginTitleLabel, title: Constants.loginTitle)
-        makeLabel(label: passwordLabel, title: Constants.passwordTitle)
+        makeLabel(label: loginTitleLabel, title: Local.AutorizationViewController.loginTitle)
+        makeLabel(label: passwordLabel, title: Local.AutorizationViewController.passwordTitle)
         makeTextFields(
             textField: loginTextField,
-            placeholder: Constants.loginPlaceholderTitle,
+            placeholder: Local.AutorizationViewController.loginPlaceholderTitle,
             leftIcon: Constants.leftLoginIcon
         )
         makeTextFields(
             textField: passwordTextField,
-            placeholder: Constants.passwordPlaceholderTitle,
+            placeholder: Local.AutorizationViewController.passwordPlaceholderTitle,
             leftIcon: Constants.leftPasswordIcon
         )
         makeErrorLabel(label: errorLoginLabel, title: Constants.errorValidLoginText)

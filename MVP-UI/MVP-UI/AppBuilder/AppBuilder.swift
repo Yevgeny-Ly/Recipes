@@ -2,10 +2,21 @@
 // Copyright © RoadMap. All rights reserved.
 
 import Foundation
+import Swinject
 import UIKit
 
 /// Контейнер для проставления зависимостей и сборки модуля
 final class AppBulder {
+    // MARK: - Private Properties
+
+    private var serviceContainer: Container
+
+    // MARK: - Initializers
+
+    init(serviceDistributor: Container) {
+        serviceContainer = serviceDistributor
+    }
+
     func makeRecipesViewController(recipecCoordinator: RecipesCoordinator) -> RecipesViewController {
         let view = RecipesViewController()
         let presenter = RecipesPresenter(view: view, coordinator: recipecCoordinator)
@@ -45,5 +56,10 @@ final class AppBulder {
             selectedImage: UIImage.smileFill
         )
         return view
+    }
+
+    func makeContainer() {
+        serviceContainer.register(NetworkService.self) { _ in NetworkService() }
+        serviceContainer.register(CoreDataManager.self) { _ in CoreDataManager() }
     }
 }

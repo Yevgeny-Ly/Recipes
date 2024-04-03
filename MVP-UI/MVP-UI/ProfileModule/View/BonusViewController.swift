@@ -9,9 +9,7 @@ final class BonusViewController: UIViewController {
 
     enum Constants {
         static var fontVerdana = "Verdana"
-        static var titleYourBonuses = "Your bonuses"
         static var fontVerdanaBold = "Verdana-Bold"
-        static var titleBonusPayment = "100"
     }
 
     // MARK: - Visual Components
@@ -19,7 +17,7 @@ final class BonusViewController: UIViewController {
     private let bonusLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont(name: Constants.fontVerdana, size: 20)
-        label.text = Constants.titleYourBonuses
+        label.text = Local.BonusViewController.titleYourBonuses
         label.textAlignment = .center
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -42,7 +40,7 @@ final class BonusViewController: UIViewController {
     private let bonusPaymentsLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont(name: Constants.fontVerdanaBold, size: 30)
-        label.text = Constants.titleBonusPayment
+        label.text = Local.BonusViewController.titleBonusPayment
         label.textAlignment = .center
         label.translatesAutoresizingMaskIntoConstraints = false
         return label

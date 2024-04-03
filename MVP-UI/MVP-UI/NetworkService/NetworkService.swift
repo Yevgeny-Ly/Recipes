@@ -135,6 +135,14 @@ final class NetworkService: NetworkServiceProtocol {
     func getRecipe(type: DishType, completionHandler: @escaping (Result<[RecipeCommonInfo], Error>) -> Void) {
         createURLComponents(type: type)
         guard let url = component.url else { return }
+
+        guard let url = URL.makeURL(url, mockFileName: .recipies) else {
+            if let error = "Отсутствует моковый файл" as? Error {
+                completionHandler(.failure(error))
+            }
+            return
+        }
+
         let request = URLRequest(url: url)
         URLSession.shared.dataTask(with: request) { data, _, error in
             if let error = error {
