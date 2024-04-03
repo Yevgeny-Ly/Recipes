@@ -17,9 +17,9 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "2D0B014452C8D69A69610E8F"
-               BuildableName = "MVP-UITests.xctest"
-               BlueprintName = "MVP-UITests"
+               BlueprintIdentifier = "E01CE150ADD1118A1C3FFC23"
+               BuildableName = "MVP-UITest.xctest"
+               BlueprintName = "MVP-UITest"
                ReferencedContainer = "container:Recipies.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -35,6 +35,16 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "1F69DCA27124A3F3660C953C"
+            BuildableName = "MVP-UI.app"
+            BlueprintName = "MVP-UI"
+            ReferencedContainer = "container:Recipies.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
@@ -42,6 +52,15 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "1F69DCA27124A3F3660C953C"
+            BuildableName = "MVP-UI.app"
+            BlueprintName = "MVP-UI"
+            ReferencedContainer = "container:Recipies.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
