@@ -5,14 +5,17 @@ import XCTest
 
 final class MVPUITests: XCTestCase {
     var networkService: NetworkServiceProtocol?
+    var networtCreatorFail: RequestCreatorProtocol?
 
     override func setUp() {
         super.setUp()
         networkService = NetworkService()
+        networtCreatorFail = MockRequest()
     }
 
     override func tearDown() {
         networkService = nil
+        networtCreatorFail = nil
         super.tearDown()
     }
 
@@ -34,7 +37,7 @@ final class MVPUITests: XCTestCase {
     func testGetRecipeFailure() {
         let expectation = XCTestExpectation()
 
-        networkService?.getRecipe(type: .chicken) { result in
+        networtCreatorFail?.getRecipe(type: .chicken) { result in
             switch result {
             case .success:
                 expectation.fulfill()
