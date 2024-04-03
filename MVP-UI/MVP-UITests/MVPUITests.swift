@@ -6,7 +6,7 @@ import XCTest
 
 final class MVPUITests: XCTestCase {
     var networkService: NetworkServiceProtocol?
-    var networtCreatorFail: RequestCreatorProtocol? 
+    var networtCreatorFail: RequestCreatorProtocol?
 
     override func setUp() {
         super.setUp()
