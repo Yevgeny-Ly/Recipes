@@ -54,6 +54,15 @@ enum Local {
         )
     }
 
+    enum OurPartnersViewController {
+        /// You can get gifts and discounts from our partners
+        static let giftsDiscountsTitle = Local.tr(
+            "Localizable",
+            "OurPartnersViewController.giftsDiscountsTitle ",
+            fallback: "You can get gifts and discounts from our partners"
+        )
+    }
+
     enum RecipesDetailsViewController {
         /// isFavorite
         static let isFavorite = Local.tr(

@@ -127,6 +127,7 @@ final class RecipesDetailsViewController: UIViewController {
             action: #selector(sharedRecipe)
         )
         favoritesLogo.tintColor = tintColor
+        favoritesLogo.accessibilityIdentifier = "favoritesLogoItem"
         navigationItem.largeTitleDisplayMode = .never
         navigationItem.leftBarButtonItem = arrowLogo
         navigationItem.rightBarButtonItems = [favoritesLogo, shareLogo]

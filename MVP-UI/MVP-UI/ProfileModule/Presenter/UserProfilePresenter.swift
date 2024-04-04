@@ -73,6 +73,8 @@ extension UserProfilePresenter: UserProfilePresenterInputProtocol {
             view?.showBonusView()
         case 1:
             view?.showTermsPrivacyPolicy()
+        case 2:
+            view?.showOurPartnersView()
         default:
             break
         }
