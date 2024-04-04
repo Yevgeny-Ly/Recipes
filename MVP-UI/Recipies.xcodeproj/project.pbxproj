@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 54;
+	objectVersion = 56;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -288,6 +288,8 @@
 		D69480C577EC9C36D5891266 /* AutorizationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01AB338E9FDF219325D49694 /* AutorizationCoordinator.swift */; };
 		D7402EF9C2B6BE75DAE97336 /* DescriptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553A82D7B6FB4F9B7BBF651B /* DescriptionCell.swift */; };
 		D750AD3DDA8AEC40A4073763 /* RecipeDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35E0586ADD39607F1B7550A8 /* RecipeDTO.swift */; };
+		DA474A032BBE9CFD009DCD5D /* MVPUITestFavorites.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA474A022BBE9CFD009DCD5D /* MVPUITestFavorites.swift */; };
+		DA474A052BBE9D3E009DCD5D /* MVPUITestProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA474A042BBE9D3E009DCD5D /* MVPUITestProfile.swift */; };
 		DCA90E72E1A2048B83B73D47 /* RecipesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0BB225E3685CB629EE29E6 /* RecipesViewController.swift */; };
 		DD419A5574DA0B1736CFD80F /* NavigationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D7FD52BB20CDD29106F073B /* NavigationTableViewCell.swift */; };
 		DD517AE942DD006A6DC5F9EA /* RecipesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71750625A6FEC5440F27A31A /* RecipesListViewController.swift */; };
@@ -347,6 +349,16 @@
 		FFD67F812F35BAB749E06960 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1B2C92171FB6E1D307AF58 /* Category.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		DADBFEBE2BBE1BCE00E9A76C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4E802D98928B077B8221DD37 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1F69DCA27124A3F3660C953C;
+			remoteInfo = "MVP-UI";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		007150956BA2AB4E44C8681E /* recipies.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = recipies.json; sourceTree = "<group>"; };
 		0183716E8B738A607139E72F /* Pods-MVP-UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVP-UITests.debug.xcconfig"; path = "Target Support Files/Pods-MVP-UITests/Pods-MVP-UITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -393,7 +405,7 @@
 		5EB4F5127FECAAE282F271B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		60DCD17F0965CF8FF9F32D7D /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
 		63AE04CDD458E584B9C5A11F /* ShimerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShimerCollectionViewCell.swift; sourceTree = "<group>"; };
-		654FAF289FF54EE548CEE8EB /* MVP-UITest.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = "MVP-UITest.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		654FAF289FF54EE548CEE8EB /* MVP-UITest.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MVP-UITest.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		665CE132EBC402FB9E6B89D1 /* ServiceLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceLog.swift; sourceTree = "<group>"; };
 		66E3DECE0049175462F43194 /* SizeCellCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizeCellCategory.swift; sourceTree = "<group>"; };
 		6779A89862D83EB38B7D64C0 /* TotalDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalDTO.swift; sourceTree = "<group>"; };
@@ -435,6 +447,8 @@
 		CF518A7797121B703E59CA27 /* RecipeHitDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeHitDTO.swift; sourceTree = "<group>"; };
 		D6B7329A0248839C3C7BF836 /* ViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewState.swift; sourceTree = "<group>"; };
 		D73904996850422A8940ABF3 /* RecipePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipePresenter.swift; sourceTree = "<group>"; };
+		DA474A022BBE9CFD009DCD5D /* MVPUITestFavorites.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVPUITestFavorites.swift; sourceTree = "<group>"; };
+		DA474A042BBE9D3E009DCD5D /* MVPUITestProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVPUITestProfile.swift; sourceTree = "<group>"; };
 		DE3A32CDE7F98B1028E3B12A /* DetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsPresenter.swift; sourceTree = "<group>"; };
 		E1F32E7B9A6230F64EC582AC /* RecipiesViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipiesViewCell.swift; sourceTree = "<group>"; };
 		E2B042ADD80ABCB64539F235 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -707,7 +721,6 @@
 				AC694F132CEDA651F9A862C1 /* Pods-RecipiesMock.debug.xcconfig */,
 				E5956BDFDF034B54EA2880D1 /* Pods-RecipiesMock.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -808,6 +821,8 @@
 			isa = PBXGroup;
 			children = (
 				4E92CA5B4A9B5C4FCCAF3A14 /* MVPUITest.swift */,
+				DA474A022BBE9CFD009DCD5D /* MVPUITestFavorites.swift */,
+				DA474A042BBE9D3E009DCD5D /* MVPUITestProfile.swift */,
 			);
 			path = "MVP-UITest";
 			sourceTree = "<group>";
@@ -1041,6 +1056,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				DADBFEBF2BBE1BCE00E9A76C /* PBXTargetDependency */,
 			);
 			name = "MVP-UITest";
 			packageProductDependencies = (
@@ -1060,6 +1076,9 @@
 				BuildIndependentTargetsInParallel = YES;
 				LastUpgradeCheck = 1430;
 				TargetAttributes = {
+					E01CE150ADD1118A1C3FFC23 = {
+						TestTargetID = 1F69DCA27124A3F3660C953C;
+					};
 				};
 			};
 			buildConfigurationList = 113C397A780E300314043442 /* Build configuration list for PBXProject "Recipies" */;
@@ -1072,8 +1091,8 @@
 			);
 			mainGroup = 48F57D02584CFB498D835862;
 			packageReferences = (
-				DA16DD9F915E672F2F592807 /* XCRemoteSwiftPackageReference "MyLibrary3.git" */,
-				35E2D05691C7581BE9736EC9 /* XCRemoteSwiftPackageReference "Swinject.git" */,
+				DA16DD9F915E672F2F592807 /* XCRemoteSwiftPackageReference "MyLibrary3" */,
+				35E2D05691C7581BE9736EC9 /* XCRemoteSwiftPackageReference "Swinject" */,
 			);
 			productRefGroup = EABD60886FA22EA1C0521755 /* Products */;
 			projectDirPath = "";
@@ -1498,6 +1517,7 @@
 				4702C6097C5371AEE43EFFA0 /* AppBuilder.swift in Sources */,
 				44C6BE58CB71AD3D7F8D719E /* AppCoordinator.swift in Sources */,
 				C0687DBDF4FD7E8170B1B58D /* AppDelegate.swift in Sources */,
+				DA474A052BBE9D3E009DCD5D /* MVPUITestProfile.swift in Sources */,
 				6DB28AB346C900F294451F0B /* AutorizationCoordinator.swift in Sources */,
 				2C5D8CEBF03BBF9A02970C20 /* AutorizationPresenter.swift in Sources */,
 				8A568FE5F7774B88536B22E5 /* AutorizationViewController.swift in Sources */,
@@ -1543,6 +1563,7 @@
 				C88A1CD4CAA1D766EC8C2060 /* RecipesCoordinator.swift in Sources */,
 				1FD020B4E2BC2B6F2AD62725 /* RecipesDetailsViewController.swift in Sources */,
 				A2894BA3A9192A14F84E3B40 /* RecipesListViewController.swift in Sources */,
+				DA474A032BBE9CFD009DCD5D /* MVPUITestFavorites.swift in Sources */,
 				CBF8915656E47C352BD26A7C /* RecipesPresenter.swift in Sources */,
 				274EB7D30BD07889E78AD1FF /* RecipesViewController.swift in Sources */,
 				07BA6CBB9502AFAD6A7A52D9 /* RecipiesViewCell.swift in Sources */,
@@ -1837,6 +1858,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		DADBFEBF2BBE1BCE00E9A76C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1F69DCA27124A3F3660C953C /* MVP-UI */;
+			targetProxy = DADBFEBE2BBE1BCE00E9A76C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
 		0A52F8CE223CA407CDC38F32 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -1888,6 +1917,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "MVP-UI";
 			};
 			name = Release;
 		};
@@ -2056,6 +2086,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "MVP-UI";
 			};
 			name = Debug;
 		};
@@ -2218,7 +2249,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		35E2D05691C7581BE9736EC9 /* XCRemoteSwiftPackageReference "Swinject.git" */ = {
+		35E2D05691C7581BE9736EC9 /* XCRemoteSwiftPackageReference "Swinject" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Swinject/Swinject.git";
 			requirement = {
@@ -2226,7 +2257,7 @@
 				minimumVersion = 2.8.0;
 			};
 		};
-		DA16DD9F915E672F2F592807 /* XCRemoteSwiftPackageReference "MyLibrary3.git" */ = {
+		DA16DD9F915E672F2F592807 /* XCRemoteSwiftPackageReference "MyLibrary3" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Yevgeny-Ly/MyLibrary3.git";
 			requirement = {
@@ -2239,37 +2270,37 @@
 /* Begin XCSwiftPackageProductDependency section */
 		2CB8441E6A5DC1C0157BD681 /* Swinject */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 35E2D05691C7581BE9736EC9 /* XCRemoteSwiftPackageReference "Swinject.git" */;
+			package = 35E2D05691C7581BE9736EC9 /* XCRemoteSwiftPackageReference "Swinject" */;
 			productName = Swinject;
 		};
 		47BDF9D0B3DE98EF7F103115 /* MyLibrary */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = DA16DD9F915E672F2F592807 /* XCRemoteSwiftPackageReference "MyLibrary3.git" */;
+			package = DA16DD9F915E672F2F592807 /* XCRemoteSwiftPackageReference "MyLibrary3" */;
 			productName = MyLibrary;
 		};
 		5778EC015F7543AC2212F6AA /* Swinject */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 35E2D05691C7581BE9736EC9 /* XCRemoteSwiftPackageReference "Swinject.git" */;
+			package = 35E2D05691C7581BE9736EC9 /* XCRemoteSwiftPackageReference "Swinject" */;
 			productName = Swinject;
 		};
 		93DF02A3D708AF0785F8BF20 /* Swinject */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 35E2D05691C7581BE9736EC9 /* XCRemoteSwiftPackageReference "Swinject.git" */;
+			package = 35E2D05691C7581BE9736EC9 /* XCRemoteSwiftPackageReference "Swinject" */;
 			productName = Swinject;
 		};
 		A1F45DC91644BE55D849528C /* MyLibrary */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = DA16DD9F915E672F2F592807 /* XCRemoteSwiftPackageReference "MyLibrary3.git" */;
+			package = DA16DD9F915E672F2F592807 /* XCRemoteSwiftPackageReference "MyLibrary3" */;
 			productName = MyLibrary;
 		};
 		C0D573C37F20ACB72AEE39F2 /* MyLibrary */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = DA16DD9F915E672F2F592807 /* XCRemoteSwiftPackageReference "MyLibrary3.git" */;
+			package = DA16DD9F915E672F2F592807 /* XCRemoteSwiftPackageReference "MyLibrary3" */;
 			productName = MyLibrary;
 		};
 		E5D1C1A8B775EC65F1865AE8 /* MyLibrary */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = DA16DD9F915E672F2F592807 /* XCRemoteSwiftPackageReference "MyLibrary3.git" */;
+			package = DA16DD9F915E672F2F592807 /* XCRemoteSwiftPackageReference "MyLibrary3" */;
 			productName = MyLibrary;
 		};
 /* End XCSwiftPackageProductDependency section */

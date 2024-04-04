@@ -23,6 +23,7 @@ final class FavoritesViewController: UIViewController {
     private let emptyFavoritesImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.image = Constants.noFavoritesImage
+        imageView.accessibilityIdentifier = "emptyFavoritesImageView"
         return imageView
     }()
 
@@ -33,6 +34,7 @@ final class FavoritesViewController: UIViewController {
         table.delegate = self
         table.separatorStyle = .none
         table.showsVerticalScrollIndicator = false
+        table.accessibilityIdentifier = "favoritesTableView"
         return table
     }()
 

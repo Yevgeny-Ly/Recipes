@@ -1,0 +1,37 @@
+{
+  "configurations" : [
+    {
+      "id" : "7BD8F82C-D587-488E-9CB6-8D213297E8B6",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "codeCoverage" : {
+      "targets" : [
+        {
+          "containerPath" : "container:Recipies.xcodeproj",
+          "identifier" : "E01CE150ADD1118A1C3FFC23",
+          "name" : "MVP-UITest"
+        }
+      ]
+    },
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:Recipies.xcodeproj",
+      "identifier" : "1F69DCA27124A3F3660C953C",
+      "name" : "MVP-UI"
+    }
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:Recipies.xcodeproj",
+        "identifier" : "E01CE150ADD1118A1C3FFC23",
+        "name" : "MVP-UITest"
+      }
+    }
+  ],
+  "version" : 1
+}
