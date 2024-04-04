@@ -15,6 +15,8 @@ protocol UserProfileViewInputProtocol: AnyObject {
     func showBonusView()
     /// Метод для показа политики конфиденциальности
     func showTermsPrivacyPolicy()
+    /// Метод для показа гугл карты
+    func showOurPartnersView()
 }
 
 /// Экран с информацией о пользователе
@@ -40,6 +42,7 @@ final class UserProfileViewController: UIViewController {
 
     private var rowTypes: [ProfileItem]?
     private var termsPrivacyPolicyView: TermsPrivatePolicyView?
+    private var ourPartnersViewController: OurPartnersViewController?
     private var visualEffectView: UIVisualEffectView?
 
     // MARK: - Life Cycle
@@ -111,7 +114,7 @@ extension UserProfileViewController: UITableViewDataSource {
         case .header:
             return 1
         case .navigation:
-            return 3
+            return 4
         case .none:
             return 3
         }
@@ -173,6 +176,12 @@ extension UserProfileViewController: UITableViewDelegate {
 // MARK: - UserProfileViewController + UserProfileViewInputProtocol
 
 extension UserProfileViewController: UserProfileViewInputProtocol {
+    func showOurPartnersView() {
+        let ourPartnersViewController = OurPartnersViewController()
+        ourPartnersViewController.modalPresentationStyle = .fullScreen
+        present(ourPartnersViewController, animated: true)
+    }
+
     func showTermsPrivacyPolicy() {
         termsPrivacyPolicyView = TermsPrivatePolicyView(frame: CGRect(
             x: 0,

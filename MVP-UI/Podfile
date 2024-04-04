@@ -39,7 +39,19 @@ target 'MVP-UITests' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 
-  # Pods for RecipiesMock
+  # Pods for MVP-UITests
+  
+use_frameworks!
+pod 'KeychainSwift'
+pod 'SwiftGen','~> 6.0'
+
+end
+
+target 'MVP-UITest' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for MVP-UITest
   
 use_frameworks!
 pod 'KeychainSwift'

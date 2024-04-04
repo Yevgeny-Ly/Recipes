@@ -9,6 +9,9 @@ packages:
   Swinject:
     url: https://github.com/Swinject/Swinject.git
     majorVersion: 2.8.0
+  GoogleMaps:
+    url: https://github.com/googlemaps/ios-maps-sdk.git
+    majorVersion: 8.4.0
 targets:
   MVP-UI:
     type: application

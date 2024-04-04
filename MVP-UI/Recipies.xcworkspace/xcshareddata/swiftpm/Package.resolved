@@ -1,6 +1,15 @@
 {
   "pins" : [
     {
+      "identity" : "ios-maps-sdk",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/googlemaps/ios-maps-sdk.git",
+      "state" : {
+        "revision" : "bd392d7d844b49ec6795871a3c25edd01ab839f2",
+        "version" : "8.4.0"
+      }
+    },
+    {
       "identity" : "mylibrary3",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/Yevgeny-Ly/MyLibrary3.git",

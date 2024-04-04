@@ -2,6 +2,7 @@
 // Copyright © RoadMap. All rights reserved.
 
 import CoreData
+import GoogleMaps
 import UIKit
 
 @main
@@ -11,7 +12,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
     ) -> Bool {
-        true
+        // Google maps support
+        GMSServices.provideAPIKey("AIzaSyAUEcmJ4J9CVJ_SkIfiCVW7N4ZAaz_bewY")
+        return true
     }
 
     // MARK: UISceneSession Lifecycle
