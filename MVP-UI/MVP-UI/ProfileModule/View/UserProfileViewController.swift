@@ -15,6 +15,8 @@ protocol UserProfileViewInputProtocol: AnyObject {
     func showBonusView()
     /// Метод для показа политики конфиденциальности
     func showTermsPrivacyPolicy()
+    /// метод показа карт
+    func showMap()
 }
 
 /// Экран с информацией о пользователе
@@ -111,9 +113,9 @@ extension UserProfileViewController: UITableViewDataSource {
         case .header:
             return 1
         case .navigation:
-            return 3
+            return 4
         case .none:
-            return 3
+            return 4
         }
     }
 
@@ -263,6 +265,12 @@ extension UserProfileViewController: UserProfileViewInputProtocol {
     func updateTable(profileTable: [ProfileItem]) {
         rowTypes = profileTable
         tableView.reloadData()
+    }
+
+    func showMap() {
+        let mapViewController = MapViewController()
+        mapViewController.hidesBottomBarWhenPushed = true
+        navigationController?.pushViewController(mapViewController, animated: true)
     }
 }
 
