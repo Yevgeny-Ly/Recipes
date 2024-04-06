@@ -5,6 +5,9 @@ import CoreLocation
 import GoogleMaps
 import UIKit
 
+/// Протокол экрана гугл карт
+protocol OurPartnersProtocol: AnyObject {}
+
 /// Экран гугл карт
 class OurPartnersViewController: UIViewController {
     // MARK: - Constants
@@ -16,11 +19,6 @@ class OurPartnersViewController: UIViewController {
         static let okButtonTitle = "Ok"
     }
 
-    private var locationManager: CLLocationManager?
-    private lazy var coordinateLive = CLLocationCoordinate2D(latitude: 44.948239, longitude: 34.100325)
-    private lazy var camera = GMSCameraPosition.camera(withTarget: coordinateLive, zoom: 12)
-    private lazy var markerLive = GMSMarker(position: coordinateLive)
-
     // MARK: - Visual Components
 
     private let ourPartnersLabel: UILabel = {
@@ -31,17 +29,6 @@ class OurPartnersViewController: UIViewController {
         label.textAlignment = .center
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
-    }()
-
-    private let mapView = GMSMapView()
-
-    private lazy var closeButton: UIButton = {
-        let button = UIButton(type: .system)
-        button.setImage(.closeButton, for: .normal)
-        button.tintColor = .black
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.addTarget(self, action: #selector(closeViewController), for: .touchUpInside)
-        return button
     }()
 
     private let giftsDiscountsLabel: UILabel = {
@@ -81,14 +68,28 @@ class OurPartnersViewController: UIViewController {
         return button
     }()
 
+    // MARK: - Public Properties
+
+    var presenter: OurPartnersPresenter?
+
+    // MARK: - Private Properties
+
+    private lazy var marker = GMSMarker()
+    private var mapView = GMSMapView()
+    private let mapOptions = GMSMapViewOptions()
+    private var locationManager = CLLocationManager()
+    private var nextUserLocation: CLLocation = .init(latitude: 44.948239, longitude: 34.100325)
+
     // MARK: - Life Cicle
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        addSubview()
-        setupConstraints()
         setupView()
-        configureMap()
+    }
+
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        setupConstraints()
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -98,48 +99,92 @@ class OurPartnersViewController: UIViewController {
 
     // MARK: - Private Methods
 
-    private func configureMap() {
-        locationManager = CLLocationManager()
-        locationManager?.requestWhenInUseAuthorization()
-        locationManager?.delegate = self
+    private func setupView() {
+        view.backgroundColor = .white
+        configureNavigationController()
+        configureLocationManager()
+        configureOptions()
+        coonfigureMapView()
+        addSubview()
+        configureMap()
+    }
 
+    private func configureNavigationController() {
+        navigationItem.hidesBackButton = true
+        navigationController?.tabBarController?.tabBar.isHidden = true
+
+        let closeButton = UIBarButtonItem(
+            image: .closeButton,
+            style: .plain,
+            target: self,
+            action: #selector(closeViewController)
+        )
+
+        closeButton.tintColor = .black
+        navigationItem.rightBarButtonItem = closeButton
+    }
+
+    private func configureOptions() {
+        mapOptions.camera = GMSCameraPosition(target: nextUserLocation.coordinate, zoom: 12)
+        marker.position = nextUserLocation.coordinate
+        mapOptions.frame = view.bounds
+    }
+
+    private func coonfigureMapView() {
+        mapView = GMSMapView(options: mapOptions)
+        mapView.delegate = self
+        marker.map = mapView
+    }
+
+    private func configureLocationManager() {
+        locationManager.requestWhenInUseAuthorization()
+        locationManager.delegate = self
+        locationManager.requestLocation()
+        guard let location = locationManager.location else { return }
+        nextUserLocation = location
+    }
+
+    private func configureMap() {
         let coordinateCulturalPark = CLLocationCoordinate2D(latitude: 44.964279, longitude: 34.097882)
         let markerCulturalPark = GMSMarker(position: coordinateCulturalPark)
+        markerCulturalPark.title = "Парк культуры"
+        markerCulturalPark.snippet = "Симферополь, ул. Троллейбусная 12"
 
         let coordinateCafeChao = CLLocationCoordinate2D(latitude: 44.955439, longitude: 34.104773)
         let markerCafeChao = GMSMarker(position: coordinateCafeChao)
+        markerCafeChao.title = "Кафе Чао"
+        markerCafeChao.snippet = "Симферополь, ул. Ухтомская 76"
 
         let coordinatePlant = CLLocationCoordinate2D(latitude: 44.946743, longitude: 34.067593)
         let markerPlant = GMSMarker(position: coordinatePlant)
+        markerPlant.title = "Завод"
+        markerPlant.snippet = "Симферополь, ул. Кирова 122"
 
         let orphanage = CLLocationCoordinate2D(latitude: 44.911756, longitude: 34.092733)
         let markerOrphanage = GMSMarker(position: orphanage)
+        markerOrphanage.title = "Дествкий дом"
+        markerOrphanage.snippet = "Симферополь, пер. Жигулин 87"
 
         let terskayaVillage = CLLocationCoordinate2D(latitude: 44.941042, longitude: 34.145777)
         let markerTerskayaVillage = GMSMarker(position: terskayaVillage)
+        markerTerskayaVillage.title = "Станица Терская"
+        markerTerskayaVillage.snippet = "Терска, ул. Вавилова 16"
 
         let derzhavnayaChurch = CLLocationCoordinate2D(latitude: 44.977330, longitude: 34.130283)
         let markerDerzhavnayaChurch = GMSMarker(position: derzhavnayaChurch)
+        markerDerzhavnayaChurch.title = "Державная церковь"
+        markerDerzhavnayaChurch.snippet = "Симферополь, ул. Гоголя 119"
 
-        markerLive.map = mapView
         markerCulturalPark.map = mapView
         markerCafeChao.map = mapView
         markerPlant.map = mapView
         markerOrphanage.map = mapView
         markerTerskayaVillage.map = mapView
         markerDerzhavnayaChurch.map = mapView
-        mapView.camera = camera
-
-        mapView.delegate = self
-    }
-
-    private func setupView() {
-        view.backgroundColor = .white
     }
 
     private func addSubview() {
         view.addSubview(ourPartnersLabel)
-        view.addSubview(closeButton)
         view.addSubview(giftsDiscountsLabel)
         view.addSubview(okButton)
         view.addSubview(mapView)
@@ -149,7 +194,6 @@ class OurPartnersViewController: UIViewController {
 
     private func setupConstraints() {
         ourPartnersLabelConstraints()
-        closeButtonConstraints()
         giftsDiscountsLabelConstraints()
         okButtonConstraintsConstraints()
         mapViewConstraints()
@@ -157,18 +201,35 @@ class OurPartnersViewController: UIViewController {
         locationButtonConstraints()
     }
 
+    @objc private func closeViewController() {
+        presenter?.dissmiss()
+    }
+
+    @objc private func returnsUserGeolocation() {
+        locationManager.startUpdatingLocation()
+        if let location = locationManager.location {
+            nextUserLocation = location
+        }
+
+        marker.icon = GMSMarker.markerImage(with: .blue)
+        locationButton.setImage(.locationPress, for: .normal)
+
+        if let locationManager = locationManager.location?.coordinate {
+            mapView.animate(toLocation: locationManager)
+            marker.position = locationManager
+            mapView.animate(toZoom: 12)
+        }
+    }
+}
+
+// MARK: - Extension + Constraints
+
+extension OurPartnersViewController {
     private func ourPartnersLabelConstraints() {
         ourPartnersLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 64).isActive = true
         ourPartnersLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         ourPartnersLabel.widthAnchor.constraint(equalToConstant: 170).isActive = true
         ourPartnersLabel.heightAnchor.constraint(equalToConstant: 24).isActive = true
-    }
-
-    private func closeButtonConstraints() {
-        closeButton.centerYAnchor.constraint(equalTo: ourPartnersLabel.centerYAnchor).isActive = true
-        closeButton.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -20).isActive = true
-        closeButton.widthAnchor.constraint(equalToConstant: 13).isActive = true
-        closeButton.heightAnchor.constraint(equalToConstant: 13).isActive = true
     }
 
     private func mapViewConstraints() {
@@ -204,23 +265,25 @@ class OurPartnersViewController: UIViewController {
         locationButton.centerXAnchor.constraint(equalTo: panelViewLocation.centerXAnchor).isActive = true
         locationButton.centerYAnchor.constraint(equalTo: panelViewLocation.centerYAnchor).isActive = true
     }
-
-    @objc private func closeViewController() {
-        dismiss(animated: true)
-    }
-
-    @objc private func returnsUserGeolocation() {
-        markerLive.icon = GMSMarker.markerImage(with: .systemBlue)
-        locationButton.setImage(.locationPress, for: .normal)
-    }
 }
+
+// MARK: - Extension + GMSMapViewDelegate
 
 extension OurPartnersViewController: GMSMapViewDelegate {
     func mapView(_ mapView: GMSMapView, didChange position: GMSCameraPosition) {
-        markerLive.icon = GMSMarker.markerImage(with: .none)
         locationButton.setImage(.locationNotPress, for: .normal)
+        marker.icon = GMSMarker.markerImage(with: .none)
+    }
+
+    func mapView(_ mapView: GMSMapView, didTap marker: GMSMarker) -> Bool {
+        print(marker.title ?? GMSMarker())
+        presenter?.pushDetailMarker(marker: marker)
+        marker.icon = GMSMarker.markerImage(with: .blue)
+        return true
     }
 }
+
+// MARK: - Extension + CLLocationManagerDelegate
 
 extension OurPartnersViewController: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
@@ -231,3 +294,7 @@ extension OurPartnersViewController: CLLocationManagerDelegate {
         print(error)
     }
 }
+
+// MARK: - Extension + OurPartnersProtocol
+
+extension OurPartnersViewController: OurPartnersProtocol {}
