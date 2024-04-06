@@ -12,7 +12,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
     ) -> Bool {
-        // Google maps support
         GMSServices.provideAPIKey("AIzaSyAUEcmJ4J9CVJ_SkIfiCVW7N4ZAaz_bewY")
         return true
     }

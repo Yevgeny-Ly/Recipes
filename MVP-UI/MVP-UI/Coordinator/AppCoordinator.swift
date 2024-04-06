@@ -17,8 +17,7 @@ final class ApplicationCoordinator: BaseCoordinator {
     }
 
     override func start() {
-//        toAutorization()
-        tabBarMain()
+        toAutorization()
     }
 
     private func tabBarMain() {

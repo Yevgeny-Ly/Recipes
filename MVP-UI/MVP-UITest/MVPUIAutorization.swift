@@ -1,4 +1,4 @@
-// MVPUITested.swift
+// MVPUIAutorization.swift
 // Copyright © RoadMap. All rights reserved.
 
 import XCTest
@@ -72,10 +72,10 @@ final class MVPUITested: XCTestCase {
         /// Нажатие на кнопку входа
         app.buttons["Login"].staticTexts["Login"].tap()
 
-        testeRecipiesScreen(app: app)
+        testRecipiesScreen(app: app)
     }
 
-    func testeRecipiesScreen(app: XCUIApplication) {
+    func testRecipiesScreen(app: XCUIApplication) {
         /// Нахождение текста в коллекции
         let dowloadCellElement = app.collectionViews.staticTexts["chicken"]
 

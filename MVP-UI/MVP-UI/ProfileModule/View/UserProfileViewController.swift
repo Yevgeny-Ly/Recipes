@@ -177,9 +177,7 @@ extension UserProfileViewController: UITableViewDelegate {
 
 extension UserProfileViewController: UserProfileViewInputProtocol {
     func showOurPartnersView() {
-        let ourPartnersViewController = OurPartnersViewController()
-        ourPartnersViewController.modalPresentationStyle = .fullScreen
-        present(ourPartnersViewController, animated: true)
+        presenter?.pushMap()
     }
 
     func showTermsPrivacyPolicy() {
