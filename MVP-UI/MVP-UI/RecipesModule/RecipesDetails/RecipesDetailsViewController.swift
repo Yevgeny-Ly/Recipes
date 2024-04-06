@@ -27,12 +27,6 @@ final class RecipesDetailsViewController: UIViewController {
         static let heightCellHeader: CGFloat = 350
         static let heightCellInfo: CGFloat = 60
         static let heightCellDescription: CGFloat = 690
-        static let titleAlert = "Функционал в разработке"
-        static let confirmActionAlert = "Ok"
-        static let titleArrowBackward = "arrowBackward"
-        static let titleNoFavorites = "noFavorite"
-        static let titleShared = "shared"
-        static let isFavorite = "isFavorite"
         static let emptyDataImage = UIImage.emptyViewData
         static let errorServiceImage = UIImage.errorService
     }
@@ -117,7 +111,7 @@ final class RecipesDetailsViewController: UIViewController {
 
     private func makeBarButtonItem(image: String, tintColor: UIColor) {
         let arrowButton = UIButton(type: .custom)
-        arrowButton.setImage(UIImage(named: Constants.titleArrowBackward), for: .normal)
+        arrowButton.setImage(UIImage(named: Local.RecipesDetailsViewController.titleArrowBackward), for: .normal)
         arrowButton.addTarget(self, action: #selector(returnsAllRecipes), for: .touchUpInside)
         let arrowLogo = UIBarButtonItem(customView: arrowButton)
         let favoritesLogo = UIBarButtonItem(
@@ -127,12 +121,13 @@ final class RecipesDetailsViewController: UIViewController {
             action: #selector(savesRecipeFavorites)
         )
         let shareLogo = UIBarButtonItem(
-            image: UIImage(named: Constants.titleShared),
+            image: UIImage(named: Local.RecipesDetailsViewController.titleShared),
             style: .plain,
             target: self,
             action: #selector(sharedRecipe)
         )
         favoritesLogo.tintColor = tintColor
+        favoritesLogo.accessibilityIdentifier = "favoritesLogoItem"
         navigationItem.largeTitleDisplayMode = .never
         navigationItem.leftBarButtonItem = arrowLogo
         navigationItem.rightBarButtonItems = [favoritesLogo, shareLogo]
@@ -197,7 +192,7 @@ final class RecipesDetailsViewController: UIViewController {
             let logAction = LogAction.userSharedRecipe(recipeShare)
             logAction.log(fileURL: logURL)
             do {
-                let logContent = try String(contentsOf: logURL)
+                _ = try String(contentsOf: logURL)
             } catch {}
         } else {}
     }
@@ -299,12 +294,12 @@ extension RecipesDetailsViewController: DetailsViewInputProtocol {
     }
 
     func noFavorite() {
-        makeBarButtonItem(image: Constants.titleNoFavorites, tintColor: .black)
+        makeBarButtonItem(image: Local.RecipesDetailsViewController.titleNoFavorites, tintColor: .black)
         tableView.reloadData()
     }
 
     func isFavorite() {
-        makeBarButtonItem(image: Constants.isFavorite, tintColor: .red)
+        makeBarButtonItem(image: Local.RecipesDetailsViewController.isFavorite, tintColor: .red)
         tableView.reloadData()
     }
 

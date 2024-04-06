@@ -11,10 +11,12 @@ protocol UserProfilePresenterInputProtocol: AnyObject {
     func requestUser()
     /// Метод дляя обновления информации о пользователе
     func updateUserName(withName name: String)
-    ///  Метод для экшена по кнопке
+    /// Метод для экшена по кнопке
     func actionAlert()
-    /// обновляем данные пользователя
+    /// Обновляем данные пользователя
     func updateUserInfo(avatar: Data)
+    /// Переход на экран гугл карты
+    func pushMap()
 }
 
 /// Презентер экрана профиля
@@ -39,6 +41,10 @@ final class UserProfilePresenter {
 // MARK: - extension + UserProfileProtocol
 
 extension UserProfilePresenter: UserProfilePresenterInputProtocol {
+    func pushMap() {
+        userCoordinator?.pushMapView()
+    }
+
     func updateUserInfo(avatar: Data) {
         let oldUser = userService
         let newUser = User(
@@ -73,6 +79,8 @@ extension UserProfilePresenter: UserProfilePresenterInputProtocol {
             view?.showBonusView()
         case 1:
             view?.showTermsPrivacyPolicy()
+        case 2:
+            view?.showOurPartnersView()
         default:
             break
         }
@@ -86,9 +94,5 @@ extension UserProfilePresenter: UserProfilePresenterInputProtocol {
             .navigation(dataNavigation)
         ]
         view?.updateTable(profileTable: rowsType)
-    }
-
-    func presentViewController() {
-        userCoordinator?.pushDetailViewController()
     }
 }

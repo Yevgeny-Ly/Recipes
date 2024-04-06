@@ -16,6 +16,7 @@ struct ProfileNavigationCellSource {
         let profileFields: [ProfileNavigationCellSource] = [
             .init(shortcutCell: "bonuses", nameCell: "Bonuses"),
             .init(shortcutCell: "termsPrivacyPolicy", nameCell: "Terms & Privacy Policy"),
+            .init(shortcutCell: "ourPartners", nameCell: "Our Partners"),
             .init(shortcutCell: "logOut", nameCell: "Log out")
         ]
         return profileFields

@@ -31,15 +31,21 @@ final class DetailsPresenter {
     private weak var view: DetailsViewInputProtocol?
     private var recipe: RecipeCommonInfo
     private var isFavorites = false
-    private let networkService = NetworkService()
+    private let networkService: NetworkService
     private var recipeDetail: RecipeDetail?
 
     // MARK: - Initializers
 
-    init(view: DetailsViewInputProtocol, recipe: RecipeCommonInfo, recipesCoordinator: BaseCoordinator) {
+    init(
+        view: DetailsViewInputProtocol,
+        recipe: RecipeCommonInfo,
+        recipesCoordinator: BaseCoordinator,
+        networkService: NetworkService
+    ) {
         self.view = view
         self.recipe = recipe
         self.recipesCoordinator = recipesCoordinator
+        self.networkService = networkService
         parsingDetail()
     }
 }
@@ -57,12 +63,12 @@ extension DetailsPresenter: DetailsPresenterInputProtocol {
                     guard let recipeDetail = self.recipeDetail else { return }
                     self.view?.getDetail(recipe: recipeDetail)
                     self.state = .data(recipes)
-                    CoreDataManager.shared.createDetailRecipes(detailRecipesDTO: recipeDetail)
+//                    CoreDataManager.shared.createDetailRecipes(detailRecipesDTO: recipeDetail)
                 case let .failure(error):
                     self.state = .error(error)
                     DispatchQueue.main.async {
-                        let data = CoreDataManager.shared.fetchDetail(name: self.recipe.label)
-                        self.recipeDetail = data
+//                        let data = CoreDataManager.shared.fetchDetail(name: self.recipe.label)
+//                        self.recipeDetail = data
                         guard let recipeDetail = self.recipeDetail else { return }
                         self.view?.getDetail(recipe: recipeDetail)
                         self.state = .data(recipeDetail)

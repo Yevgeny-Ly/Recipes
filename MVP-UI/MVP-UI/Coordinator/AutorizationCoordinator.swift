@@ -1,11 +1,6 @@
 // AutorizationCoordinator.swift
 // Copyright © RoadMap. All rights reserved.
 
-//
-//  AutorizationCoordinator.swift
-//  MVP-UI
-//
-//
 import UIKit
 
 /// Координатор авторизации

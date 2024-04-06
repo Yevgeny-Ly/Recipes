@@ -2,25 +2,33 @@
 // Copyright © RoadMap. All rights reserved.
 
 import Foundation
+import Swinject
 import UIKit
 
 /// Главный координатор
 final class ApplicationCoordinator: BaseCoordinator {
-    private var tabBarViewController: TabBarController?
-    private var appBuilder = AppBulder()
+    private var tabBarViewController = TabBarController()
+    private var appBuilder: AppBulder
+    private var container: Container
+
+    init(appBuilder: AppBulder, container: Container) {
+        self.appBuilder = appBuilder
+        self.container = container
+    }
+
     override func start() {
         toAutorization()
     }
 
     private func tabBarMain() {
-        tabBarViewController = TabBarController()
-
-        let recipesCoordinator = RecipesCoordinator()
+        guard let networkService = container.resolve(NetworkService.self),
+              let coreDataManager = container.resolve(CoreDataManager.self) else { return }
+        let recipesCoordinator = RecipesCoordinator(networkService: networkService, coreDataManager: coreDataManager)
         let recipesModule = appBuilder.makeRecipesViewController(recipecCoordinator: recipesCoordinator)
         recipesCoordinator.setRootController(viewController: recipesModule)
         add(coordinator: recipesCoordinator)
 
-        let favoriteCoordinator = FavoritesCoordinator()
+        let favoriteCoordinator = FavoritesCoordinator(networkService: networkService)
         let favoritesModule = appBuilder.makeFavoritesViewController(favoritesCoordinator: favoriteCoordinator)
         favoriteCoordinator.setRootController(viewController: favoritesModule)
         add(coordinator: favoriteCoordinator)
@@ -34,7 +42,7 @@ final class ApplicationCoordinator: BaseCoordinator {
         guard let favoriteViewController = favoriteCoordinator.rootViewController else { return }
         guard let userViewController = userCoordinator.rootViewController else { return }
 
-        tabBarViewController?.setViewControllers(
+        tabBarViewController.setViewControllers(
             [
                 recipesRootViewController,
                 favoriteViewController,
@@ -42,7 +50,7 @@ final class ApplicationCoordinator: BaseCoordinator {
             ],
             animated: false
         )
-        guard let tabBarViewController = tabBarViewController else { return }
+        let tabBarViewController = tabBarViewController
 
         setAsRoot​(​_​: tabBarViewController)
     }

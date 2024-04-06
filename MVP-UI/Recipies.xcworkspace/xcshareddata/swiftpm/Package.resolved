@@ -1,0 +1,32 @@
+{
+  "pins" : [
+    {
+      "identity" : "ios-maps-sdk",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/googlemaps/ios-maps-sdk.git",
+      "state" : {
+        "revision" : "bd392d7d844b49ec6795871a3c25edd01ab839f2",
+        "version" : "8.4.0"
+      }
+    },
+    {
+      "identity" : "mylibrary3",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Yevgeny-Ly/MyLibrary3.git",
+      "state" : {
+        "revision" : "30e08a1e71ac9ddffc7671c11f1bd09fb822a4bb",
+        "version" : "1.0.4"
+      }
+    },
+    {
+      "identity" : "swinject",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Swinject/Swinject.git",
+      "state" : {
+        "revision" : "463cb2d659c8ae34899d18057ea5b1bb86fc3178",
+        "version" : "2.8.4"
+      }
+    }
+  ],
+  "version" : 2
+}

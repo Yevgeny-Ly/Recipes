@@ -2,6 +2,7 @@
 // Copyright © RoadMap. All rights reserved.
 
 import CoreData
+import GoogleMaps
 import UIKit
 
 @main
@@ -11,7 +12,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
     ) -> Bool {
-        true
+        GMSServices.provideAPIKey("AIzaSyAUEcmJ4J9CVJ_SkIfiCVW7N4ZAaz_bewY")
+        return true
     }
 
     // MARK: UISceneSession Lifecycle
@@ -42,8 +44,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             do {
                 try context.save()
             } catch {
-                let error = error as? NSError
-                fatalError(error?.localizedDescription ?? "Ошибка")
+                let error = error
+                fatalError(error.localizedDescription)
             }
         }
     }

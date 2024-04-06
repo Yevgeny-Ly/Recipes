@@ -24,7 +24,7 @@ extension UIImageView {
     func downloaded(from link: String) {
         guard let url = URL(string: link) else { return }
         var image: UIImage?
-        if image != nil {
+        if let image = image {
             self.image = image
         } else {
             downloaded(from: url)
