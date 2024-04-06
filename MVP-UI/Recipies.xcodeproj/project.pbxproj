@@ -295,6 +295,7 @@
 		DA474A0C2BBF86AC009DCD5D /* GoogleMapsCore in Frameworks */ = {isa = PBXBuildFile; productRef = DA474A0B2BBF86AC009DCD5D /* GoogleMapsCore */; };
 		DA474A0E2BBF86AC009DCD5D /* GoogleMapsM4B in Frameworks */ = {isa = PBXBuildFile; productRef = DA474A0D2BBF86AC009DCD5D /* GoogleMapsM4B */; };
 		DA474A102BBF9C40009DCD5D /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA474A0F2BBF9C40009DCD5D /* MapViewController.swift */; };
+		DAEA77442BC0026000D00004 /* MarkerPopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEA77432BC0026000D00004 /* MarkerPopupViewController.swift */; };
 		DCA90E72E1A2048B83B73D47 /* RecipesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0BB225E3685CB629EE29E6 /* RecipesViewController.swift */; };
 		DD419A5574DA0B1736CFD80F /* NavigationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D7FD52BB20CDD29106F073B /* NavigationTableViewCell.swift */; };
 		DD517AE942DD006A6DC5F9EA /* RecipesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71750625A6FEC5440F27A31A /* RecipesListViewController.swift */; };
@@ -455,6 +456,7 @@
 		DA474A022BBE9CFD009DCD5D /* MVPUITestFavorites.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVPUITestFavorites.swift; sourceTree = "<group>"; };
 		DA474A042BBE9D3E009DCD5D /* MVPUITestProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVPUITestProfile.swift; sourceTree = "<group>"; };
 		DA474A0F2BBF9C40009DCD5D /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		DAEA77432BC0026000D00004 /* MarkerPopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkerPopupViewController.swift; sourceTree = "<group>"; };
 		DE3A32CDE7F98B1028E3B12A /* DetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsPresenter.swift; sourceTree = "<group>"; };
 		E1F32E7B9A6230F64EC582AC /* RecipiesViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipiesViewCell.swift; sourceTree = "<group>"; };
 		E2B042ADD80ABCB64539F235 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -845,6 +847,7 @@
 				5D7FD52BB20CDD29106F073B /* NavigationTableViewCell.swift */,
 				E30849203FE82FBD724E5116 /* TermsPrivatePolicyView.swift */,
 				DA474A0F2BBF9C40009DCD5D /* MapViewController.swift */,
+				DAEA77432BC0026000D00004 /* MarkerPopupViewController.swift */,
 				1B07C68BF3D1F08A25458897 /* UserProfileViewController.swift */,
 			);
 			path = View;
@@ -1647,6 +1650,7 @@
 				8E9D0824282E234F85370F51 /* LoadServiceImage.swift in Sources */,
 				F0ACAC9D42E2EC04B0F0A8F8 /* LoadServiceProtocol.swift in Sources */,
 				5182F9D354CCC5AE2760D2B1 /* MockFileName.swift in Sources */,
+				DAEA77442BC0026000D00004 /* MarkerPopupViewController.swift in Sources */,
 				B0C2710B42200C0C76DB8CFD /* MockRequest.swift in Sources */,
 				F66A265631BEB968513E4452 /* NavigationTableViewCell.swift in Sources */,
 				ED390BDF6B66FE022352C022 /* NetworkService.swift in Sources */,
