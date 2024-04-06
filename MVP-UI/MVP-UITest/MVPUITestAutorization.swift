@@ -1,11 +1,11 @@
-// MVPUIAutorization.swift
+// MVPUITestAutorization.swift
 // Copyright © RoadMap. All rights reserved.
 
 import XCTest
 
 // swiftlint:disable all
 
-final class MVPUITested: XCTestCase {
+final class MVPUITestAutorization: XCTestCase {
     var app: XCUIApplication!
 
     override func setUpWithError() throws {

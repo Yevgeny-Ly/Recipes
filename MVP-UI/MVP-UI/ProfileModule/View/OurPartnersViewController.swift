@@ -9,7 +9,7 @@ import UIKit
 protocol OurPartnersProtocol: AnyObject {}
 
 /// Экран гугл карт
-class OurPartnersViewController: UIViewController {
+final class OurPartnersViewController: UIViewController {
     // MARK: - Constants
 
     enum Constants {

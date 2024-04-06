@@ -5,7 +5,7 @@ import GoogleMaps
 import UIKit
 
 /// Экран деталей маркера локации
-class MarkerLocationViewController: UIViewController {
+final class MarkerLocationViewController: UIViewController {
     // MARK: - Constants
 
     enum Constants {
