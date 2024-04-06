@@ -1,4 +1,5 @@
 {
+  "originHash" : "4b4fb6c45255c63a8dc40083567bc8195268f049904a9452e3e690f2462a80b5",
   "pins" : [
     {
       "identity" : "mylibrary3",
@@ -19,5 +20,5 @@
       }
     }
   ],
-  "version" : 2
+  "version" : 3
 }
