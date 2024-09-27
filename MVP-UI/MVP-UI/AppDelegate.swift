@@ -42,8 +42,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             do {
                 try context.save()
             } catch {
-                let error = error as? NSError
-                fatalError(error?.localizedDescription ?? "Ошибка")
+                let error = error
+                fatalError(error.localizedDescription)
             }
         }
     }
